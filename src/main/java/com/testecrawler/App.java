@@ -15,13 +15,15 @@ public class App
 
     	String url = "https://revistaautoesporte.globo.com/rss/ultimas/feed.xml";
 		Document doc = new RssFeed().getFeed(url);
-		//String json = new RssFeed().feedGeneretionJson(doc);
-		Feed feed = new RssFeed().feedGeneretion(doc);
-		//System.out.println(json);
-		List<Item> items = feed.getItems();
+		String json = new RssFeed().feedGeneretionJson(doc);
+		//Feed feed = new RssFeed().feedGeneretion(doc);
+		System.out.println(json);
+		/*
+		 * List<Item> items = feed.getItems();
 		for (Item item : items) {
 			System.out.println(item.getTitle());
 		}
+		*/
 
     }
 }
